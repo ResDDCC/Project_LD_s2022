@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Variables")]
     public float movementSpeed;
     [SerializeField]
-    Descriptors.PlayerState playerState;
+    Descriptors.PlayerState playerState = Descriptors.PlayerState.Moving;
     private Vector2 moveDirection;
     private Vector2 aimDirection;
     [SerializeField]
@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerData = ProgressionStore.Instance.HandleNewPlayer(gameObject);
+        playerState = Descriptors.PlayerState.Moving;
     }
 
     private void Update()
@@ -52,7 +53,6 @@ public class PlayerController : MonoBehaviour
         {
             Move();
         }
-        
     }
 
     private void ChangeState(Descriptors.PlayerState newState)
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
     #region Combat
     void OnAttack(InputValue value)
     {
-        ChangeState(Descriptors.PlayerState.Attacking);
+        //ChangeState(Descriptors.PlayerState.Attacking);
     }
     #endregion
 
