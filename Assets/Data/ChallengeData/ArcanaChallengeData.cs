@@ -15,7 +15,9 @@ public class ArcanaChallengeData : ScriptableObject
     [SerializeField]
     private PlayerBuffData playerBuff;
     [SerializeField]
-    private string arenaChallengeManagerComponentName;
+    private GameObject arcanaChallengeManager;
+    [SerializeField]
+    private string arcanaChallengeManagerComponentName;
 
     #region Getters
     public string ArcanaName
@@ -51,17 +53,17 @@ public class ArcanaChallengeData : ScriptableObject
     }
 
     // For Use with AddComponent<Type>() on Arena GO
-    public System.Type ArcanaChallengeArenaManager
+    public System.Type ArcanaChallengeManagerType
     {
         get
         {
-            System.Type arenaManager = System.Type.GetType(arenaChallengeManagerComponentName + ",Assembly-CSharp");
+            System.Type arenaManager = System.Type.GetType(arcanaChallengeManagerComponentName + ",Assembly-CSharp");
             return arenaManager;
         }
     }
     /**
     System.Type arenaManagerComponent = strengthChallenge.ArcanaChallengeArenaManager;
-    ArcanaChallengeArenaManager.AddComponent<arenaManagerComponent>
+    ArcanaChallengeArenaManager.AddComponent<arenaManagerComponent>();
     */
     #endregion
 }

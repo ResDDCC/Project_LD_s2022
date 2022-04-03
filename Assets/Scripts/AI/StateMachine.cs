@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.InputSystem;
 
 public class StateMachine : MonoBehaviour
 {
@@ -26,18 +27,33 @@ public class StateMachine : MonoBehaviour
     // need to replace the GameObject declaration specifically with player script if we want to do fancier stuff
     [SerializeField] private GameObject player;
     [SerializeField] private AIPath pathfinder;
+    [SerializeField] private AIDestinationSetter destinationSetter;
     [SerializeField] private GameObject projectile;
 
     [Header("Settings")]
     [SerializeField] private State state;
     [SerializeField] private EnemyType enemyType;
-    
-
+    [SerializeField] private InputAction startAction;
 
     // Start is called before the first frame update
     void Start()
     {
         state = State.Idle;
+        destinationSetter = GetComponent<AIDestinationSetter>();
+
+        startAction.performed += onStartAct;
+        startAction.Enable();
+    }
+
+    void onStartAct(InputAction.CallbackContext ctx)
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        destinationSetter.target = player.transform;
+
+        state = State.Moving;
+
+
+        Debug.Log("Started AI");
     }
 
     // Update is called once per frame
@@ -51,9 +67,6 @@ public class StateMachine : MonoBehaviour
                 
                 pathfinder.canMove = false;
 
-                if (Input.GetKeyDown("space")) {
-                    state = State.Moving;
-                }
                 break;
             
             case State.Moving:
