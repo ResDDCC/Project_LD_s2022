@@ -26,10 +26,12 @@ public class StateMachine : MonoBehaviour
     // need to replace the GameObject declaration specifically with player script if we want to do fancier stuff
     [SerializeField] private GameObject player;
     [SerializeField] private AIPath pathfinder;
+    [SerializeField] private GameObject projectile;
 
     [Header("Settings")]
     [SerializeField] private State state;
     [SerializeField] private EnemyType enemyType;
+    
 
 
     // Start is called before the first frame update
@@ -89,8 +91,11 @@ public class StateMachine : MonoBehaviour
                         break;
 
                     case EnemyType.Projectile:
+                       
                         // launch projectile
                         // the projectile itself will check if it hits/deals damage to player
+                        Instantiate(projectile, transform);
+                        
                         break;
 
                     case EnemyType.Beam:
