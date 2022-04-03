@@ -16,3 +16,4 @@ MonoBehaviour:
   description: Strengththhhhhh
   timeProvided: 5
   playerBuff: {fileID: 11400000, guid: 8b70775c874a81f408187197c62f63d7, type: 2}
+  arenaChallengeManagerComponentName: StrengthChallengeManager

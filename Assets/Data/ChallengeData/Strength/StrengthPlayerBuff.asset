@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b9ec8dac174a9429e6b3255438860c, type: 3}
   m_Name: StrengthPlayerBuff
   m_EditorClassIdentifier: 
-  buffTooltip: 
-  playerBuffComponent: {fileID: 0}
+  buffName: Strength
+  buffTooltip: Increases Attack!
+  playerBuffComponentName: StrengthBuff
