@@ -1626,7 +1626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504219657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8020163, y: 0.36199644, z: -1.227902}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2154,6 +2154,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3c51621b823d8c64eab090301e45c0d2, type: 2}
   - {fileID: 11400000, guid: 301631896f575b849be66a004546765e, type: 2}
   - {fileID: 11400000, guid: bb59984f70e6bba4eba7ac37089ea8a7, type: 2}
+  playersData: []
+  activePlayers: []
   defaultTimeRemaining: 360
   currentTimeRemaining: 0
 --- !u!4 &2012159449
