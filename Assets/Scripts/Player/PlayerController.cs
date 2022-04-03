@@ -17,8 +17,6 @@ public class PlayerController : MonoBehaviour
     private bool touchingEnemy = false;
     private int collisions = 0;
 
-    
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
