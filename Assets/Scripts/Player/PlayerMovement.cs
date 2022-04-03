@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private bool touchingEnemy = false;
     [Header("Heart Images")]
     public Image[] hearts;
+    
     // Start is called before the first frame update
     void Start()
     {
