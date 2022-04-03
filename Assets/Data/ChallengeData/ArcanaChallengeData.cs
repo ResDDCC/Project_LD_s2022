@@ -9,13 +9,19 @@ public class ArcanaChallengeData : ScriptableObject
     [SerializeField]
     private string arcanaName;
     [SerializeField]
+    private string challengeTitle;
+    [SerializeField]
     private string description;
     [SerializeField]
     private float timeProvided;
     [SerializeField]
     private PlayerBuffData playerBuff;
     [SerializeField]
-    private string arenaChallengeManagerComponentName;
+    private GameObject arcanaChallengeManager;
+    [SerializeField]
+    private string arcanaChallengeManagerComponentName;
+    [SerializeField]
+    private GameObject tarotCardPrefab;
 
     #region Getters
     public string ArcanaName
@@ -26,6 +32,13 @@ public class ArcanaChallengeData : ScriptableObject
         }
     }
 
+    public string ChallengeTitle
+    {
+        get
+        {
+            return challengeTitle;
+        }
+    }
     public string Description
     {
         get
@@ -50,18 +63,26 @@ public class ArcanaChallengeData : ScriptableObject
         }
     }
 
-    // For Use with AddComponent<Type>() on Arena GO
-    public System.Type ArcanaChallengeArenaManager
+    public GameObject TarotCardPrefab
     {
         get
         {
-            System.Type arenaManager = System.Type.GetType(arenaChallengeManagerComponentName + ",Assembly-CSharp");
+            return tarotCardPrefab;
+        }
+    }
+
+    // For Use with AddComponent<Type>() on Arena GO
+    public System.Type ArcanaChallengeManagerType
+    {
+        get
+        {
+            System.Type arenaManager = System.Type.GetType(arcanaChallengeManagerComponentName + ",Assembly-CSharp");
             return arenaManager;
         }
     }
     /**
-    System.Type arenaManagerComponent = strengthChallenge.ArcanaChallengeArenaManager;
-    ArcanaChallengeArenaManager.AddComponent<arenaManagerComponent>
+    System.Type arenaManagerComponentType = strengthChallenge.ArcanaChallengeArenaManager;
+    Arena.AddComponent(arenaManagerComponentType);
     */
     #endregion
 }

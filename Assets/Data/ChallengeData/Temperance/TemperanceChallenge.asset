@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 892bd1a3e5c70f74eafef3f32f51ebba, type: 3}
-  m_Name: StrengthChallengeData
+  m_Name: TemperanceChallenge
   m_EditorClassIdentifier: 
-  arcanaName: Strength
-  challengeTitle: VIII - Strength
+  arcanaName: Temperance
+  challengeTitle: XIV - Temperance
   description: 
   timeProvided: 60
-  playerBuff: {fileID: 11400000, guid: 8b70775c874a81f408187197c62f63d7, type: 2}
+  playerBuff: {fileID: 11400000, guid: 308288542756b9947a70d9aaa1b5b4c5, type: 2}
   arcanaChallengeManager: {fileID: 0}
-  arcanaChallengeManagerComponentName: StrengthChallengeManager
+  arcanaChallengeManagerComponentName: TemperanceChallengeManager
   tarotCardPrefab: {fileID: 0}
