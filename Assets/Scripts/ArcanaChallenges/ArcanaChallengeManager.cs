@@ -49,13 +49,10 @@ public class ArcanaChallengeManager : MonoBehaviour
 
         // Clear current player buff effects
 
-        // Give players buff effects
+        // Tell Players to Register their Buffs
         foreach (GameObject player in ProgressionStore.Instance.activePlayers)
         {
-            foreach (ArcanaChallengeData challenge in ProgressionStore.Instance.completedArcana.Values)
-            {
-                player.AddComponent(challenge.PlayerBuff.PlayerBuffComponentType);
-            }
+            player.GetComponent<PlayerController>().RegisterBuffs();
         }
     }
 

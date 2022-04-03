@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: TemperanceChallenge
   m_EditorClassIdentifier: 
   arcanaName: Temperance
+  challengeTitle: XIV - Temperance
   description: 
-  timeProvided: 0
-  playerBuff: {fileID: 0}
+  timeProvided: 60
+  playerBuff: {fileID: 11400000, guid: 308288542756b9947a70d9aaa1b5b4c5, type: 2}
   arcanaChallengeManager: {fileID: 0}
-  arcanaChallengeManagerComponentName: 
+  arcanaChallengeManagerComponentName: TemperanceChallengeManager
+  tarotCardPrefab: {fileID: 0}

@@ -9,6 +9,9 @@ public class PlayerData : ScriptableObject
     private int health;
 
     [SerializeField]
+    private float baseMovementSpeed;
+
+    [SerializeField]
     private float movementSpeed;
 
     [SerializeField]

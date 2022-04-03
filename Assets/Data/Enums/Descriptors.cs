@@ -10,4 +10,11 @@ public class Descriptors
         Death,
         TaskFailure
     }
+
+    public enum PlayerState
+    {
+        Frozen,
+        Moving,
+        Attacking
+    }
 }
