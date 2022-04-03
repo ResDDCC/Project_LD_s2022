@@ -38,8 +38,8 @@ public class PlayerBuffData : ScriptableObject
         }
     }
     /**
-        System.Type buffComponent = challenge.PlayerBuff.PlayerBuffComponentType;
-        Player.AddComponent<buffComponent>();
+        System.Type buffComponentType = challenge.PlayerBuff.PlayerBuffComponentType;
+        Player.AddComponent(buffComponentType);
     */
     #endregion
 }

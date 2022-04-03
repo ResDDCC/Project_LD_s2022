@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: TowerChallenge
   m_EditorClassIdentifier: 
   arcanaName: Tower
+  challengeTitle: XVI - The Tower
   description: 
-  timeProvided: 0
-  playerBuff: {fileID: 0}
+  timeProvided: 60
+  playerBuff: {fileID: 11400000, guid: a16775ba45ddf5d4b9a45ee74f745324, type: 2}
   arcanaChallengeManager: {fileID: 0}
-  arcanaChallengeManagerComponentName: 
+  arcanaChallengeManagerComponentName: TowerChallengeManager
+  tarotCardPrefab: {fileID: 0}
