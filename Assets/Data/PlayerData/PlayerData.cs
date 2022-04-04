@@ -5,14 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerData", menuName = "Player Data", order = 51)]
 public class PlayerData : ScriptableObject
 {
-    [SerializeField]
-    private int health;
+    public int health;
 
     [SerializeField]
     private float baseMovementSpeed;
-
-    [SerializeField]
-    private float movementSpeed;
+    public float movementSpeed;
 
     [SerializeField]
     private List<PlayerBuffData> buffData;
