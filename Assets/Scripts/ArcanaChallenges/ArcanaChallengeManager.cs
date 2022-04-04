@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ArcanaChallengeManager : MonoBehaviour
+public class ArcanaChallengeManager : MonoBehaviour
 {
     [SerializeField]
     protected string challengeDataName;
@@ -11,17 +11,27 @@ public abstract class ArcanaChallengeManager : MonoBehaviour
 
     [SerializeField]
     protected List<List<GameObject>> waves = new List<List<GameObject>>();
-    
-    protected int waveTotal;
+    [SerializeField]
+    protected int waveCount;
 
-    [SerializeField]
-    protected int currWave;
-    [SerializeField]
-    protected bool isComplete;
-
-    [SerializeField]
-    protected float currTime;
     protected Descriptors.ChallengeFailure reason;
+
+    protected void Awake()
+    {
+        challengeData = ProgressionStore.Instance.GetChallengeData(challengeDataName);
+        //float timeForChallenge = challengeData.TimeProvided;
+    }
+
+    protected void Start()
+    {
+        ProgressionStore.Instance.PrepareChallenge(challengeData);
+    }
+
+    // Terrain changes, etc for the current upcoming challenge set here
+    public void PrepareArena()
+    {
+
+    }
 
     // Buff and/or Debuff Player
     public void PreparePlayers(ArcanaChallengeData challengeData)
@@ -46,6 +56,11 @@ public abstract class ArcanaChallengeManager : MonoBehaviour
         }
     }
 
+    // Initiate Timer, enemy AI, etc.
+    public void StartChallenge()
+    {
+
+    }
 
     protected void FinishChallenge(bool success)
     {
@@ -66,47 +81,9 @@ public abstract class ArcanaChallengeManager : MonoBehaviour
         ClearArena();
     }
 
-    protected float UpdateTimer()
-    {
-        if (currTime > 0) {
-            currTime -= Time.deltaTime;
-            return currTime;
-        } else {
-            return 0.0f;
-        }
-    }
-
-    protected bool CheckPlayerDeath() {
-        int playersDead = 0;
-        for (int i = 0; i < ProgressionStore.Instance.playersData.Count; i++) {
-            if (ProgressionStore.Instance.playersData[i].health <= 0) {
-                playersDead++;
-            }
-        }
-
-        if (playersDead >= ProgressionStore.Instance.playersData.Count) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    protected void SearchForEnemies() {
-        
-    }
-
-    public abstract bool CheckForFailure(float currTime);
-        // Terrain changes, etc for the current upcoming challenge set here
-    public abstract void PrepareArena();
-
-    public abstract void SpawnWave(int waveCount);
-
-    
-    // Initiate Timer, enemy AI, etc.
-    public abstract void StartChallenge();
-
     // Remove all enemies, reset to neutral for next Challenge
-    public abstract void ClearArena();
+    public void ClearArena()
+    {
+
+    }
 }
-
-
