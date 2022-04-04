@@ -17,18 +17,21 @@ public class Spawner : MonoBehaviour, IHasCooldown
     public int Id => id;
     public float CooldownDuration => cooldownDuration;
 
+    private bool waveComplete;
+
     // Start is called before the first frame update
     void Start()
     {
-        id = 1;
+        //id = 1;
         cooldownDuration = 2f;
         cooldownManager = GameObject.FindGameObjectWithTag("CooldownManager").GetComponent<CooldownManager>();
+        waveComplete = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cooldownManager.IsOnCooldown(1)) { return; }
+        if (cooldownManager.IsOnCooldown(id) || Pattern is null) { return; }
 
         if (Pattern.Count > 0)
         {
@@ -50,6 +53,12 @@ public class Spawner : MonoBehaviour, IHasCooldown
 
             cooldownManager.PutOnCooldown(this);
         }
+        
+        if (transform.childCount == 0)
+        {
+            waveComplete = true;
+        }
+        
     }
 
     private StateMachine.EnemyType Translate(int enemyType)
@@ -71,5 +80,15 @@ public class Spawner : MonoBehaviour, IHasCooldown
 
     public void SetPattern(List<int> pattern) {
         Pattern = pattern;
+    }
+
+    public void SetId(int i) 
+    {
+        id = i;
+    }
+
+    public bool Ready()
+    {
+        return waveComplete;
     }
 }

@@ -23,6 +23,8 @@ public abstract class ArcanaChallengeManager : MonoBehaviour
     protected float currTime;
     protected Descriptors.ChallengeFailure reason;
 
+    protected SpawnerManager spawnerManager;
+
     // Buff and/or Debuff Player
     public void PreparePlayers(ArcanaChallengeData challengeData)
     {

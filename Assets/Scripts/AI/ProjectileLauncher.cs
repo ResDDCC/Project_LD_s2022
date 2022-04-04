@@ -27,7 +27,7 @@ public class ProjectileLauncher : MonoBehaviour, IHasCooldown
     // Update is called once per frame
     void Update()
     {
-        if (cooldownManager.IsOnCooldown(0) || !firing) { return; }
+        if (cooldownManager.IsOnCooldown(id) || !firing) { return; }
         
         GameObject bullet = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
         cooldownManager.PutOnCooldown(this);
