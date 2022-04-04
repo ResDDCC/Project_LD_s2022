@@ -17,12 +17,35 @@ public class PlayerData : ScriptableObject
     [SerializeField]
     private List<PlayerBuffData> buffData;
 
+    public int Health
+    {
+        get
+        {
+            return health;
+        }
+    }
+
+    public float BaseMovementSpeed
+    {
+        get
+        {
+            return BaseMovementSpeed;
+        }
+    }
+
+    public float MovementSpeed
+    {
+        get
+        {
+            return movementSpeed;
+        }
+    }
     public List<PlayerBuffData> Buffs
     {
         get
         {
             return buffData;
         }
-        set {}
+        set { }
     }
 }
