@@ -24,6 +24,10 @@ public class ProgressionStore: MonoBehaviour
     [SerializeField]
     public List<PlayerData> playersData = new List<PlayerData>();
     public List<GameObject> activePlayers = new List<GameObject>();
+    public Dictionary<PlayerData, GameObject> activePlayerLookup = new Dictionary<PlayerData, GameObject>();
+
+    [SerializeField]
+    private ArcanaChallengeData currentArcana;
 
     // Timer Data
     public float currentTimeRemaining = 0.0f;
@@ -52,12 +56,14 @@ public class ProgressionStore: MonoBehaviour
         {
             newPlayerData = ScriptableObject.CreateInstance<PlayerData>();
             playersData.Add(newPlayerData);
+            
         }
         else
         {
             newPlayerData = playersData[activePlayers.Count];
         }
         activePlayers.Add(newPlayer);
+        activePlayerLookup[newPlayerData] = newPlayer;
         return newPlayerData;
     }
 
@@ -65,6 +71,21 @@ public class ProgressionStore: MonoBehaviour
     {
         activePlayers.Remove(player);
         Destroy(player);
+    }
+
+    public List<PlayerData> GetPlayerData()
+    {
+        return playersData;
+    }
+
+    public List<PlayerData> GetActivePlayerData()
+    {
+        List<PlayerData> activePlayerData = new List<PlayerData>();
+        foreach (PlayerData pd in activePlayerLookup.Keys)
+        {
+            activePlayerData.Add(pd);
+        }
+        return activePlayerData;
     }
     #endregion
 
@@ -74,6 +95,11 @@ public class ProgressionStore: MonoBehaviour
         ArcanaChallengeData found;
         allArcana.TryGetValue(challengeName, out found);
         return found;
+    }
+
+    public ArcanaChallengeData GetCurrentChallenge()
+    {
+        return currentArcana;
     }
 
     public void SucceededChallenge(ArcanaChallengeData challengeData)
@@ -94,7 +120,7 @@ public class ProgressionStore: MonoBehaviour
 
     public void PrepareChallenge(ArcanaChallengeData challenge)
     {
-
+        currentArcana = challenge;
     }
     #endregion
 }

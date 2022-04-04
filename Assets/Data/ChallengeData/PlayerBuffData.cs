@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "PlayerBuffData", menuName = "Player Buff", order = 51)]
 public class PlayerBuffData : ScriptableObject
@@ -11,6 +12,8 @@ public class PlayerBuffData : ScriptableObject
     private string buffTooltip;
     [SerializeField]
     private string playerBuffComponentName;
+    [SerializeField]
+    private Image buffIcon;
 
     #region Getters
     public string BuffName
@@ -25,6 +28,14 @@ public class PlayerBuffData : ScriptableObject
         get
         {
             return buffTooltip;
+        }
+    }
+
+    public Image BuffIcon
+    {
+        get
+        {
+            return buffIcon;
         }
     }
 
