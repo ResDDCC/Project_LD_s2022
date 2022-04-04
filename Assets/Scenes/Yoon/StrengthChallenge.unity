@@ -248,8 +248,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1781166969}
   pathfinder: {fileID: 354540981}
+  destinationSetter: {fileID: 0}
+  projectile: {fileID: 0}
   state: 0
   enemyType: 0
+  arcanaType: 0
+  startAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  waveID: 0
 --- !u!114 &354540980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,8 +558,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1781166969}
   pathfinder: {fileID: 415294133}
+  destinationSetter: {fileID: 0}
+  projectile: {fileID: 0}
   state: 0
   enemyType: 0
+  arcanaType: 0
+  startAction:
+    m_Name: Start
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 00de773b-b61a-4ea0-aa87-a0ee232a9b0c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  waveID: 0
 --- !u!114 &415294132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,8 +935,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1781166969}
   pathfinder: {fileID: 991693940}
+  destinationSetter: {fileID: 0}
+  projectile: {fileID: 0}
   state: 0
   enemyType: 0
+  arcanaType: 0
+  startAction:
+    m_Name: Start
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: abf0df9d-089e-414e-8c55-007321ca044f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  waveID: 0
 --- !u!114 &991693939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,16 +1479,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1596707631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1596707633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2951,6 +2999,54 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2081615225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081615227}
+  - component: {fileID: 2081615226}
+  m_Layer: 0
+  m_Name: TestArena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2081615226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081615225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063d373dcbb71b0468e06c355cbf5669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  challengeDataName: 
+  challengeData: {fileID: 0}
+  currWave: 0
+  isComplete: 0
+  currTime: 0
+--- !u!4 &2081615227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081615225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.7858276, y: -0.058651533, z: -15.540868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2105645621
 GameObject:
   m_ObjectHideFlags: 0

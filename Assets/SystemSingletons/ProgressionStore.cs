@@ -26,10 +26,7 @@ public class ProgressionStore: MonoBehaviour
     public List<GameObject> activePlayers = new List<GameObject>();
 
     // Timer Data
-    [SerializeField]
-    private float defaultTimeRemaining = 360.0f;
-    [SerializeField]
-    private float currentTimeRemaining = 0.0f;
+    public float currentTimeRemaining = 0.0f;
 
     private void Awake()
     {
@@ -40,9 +37,6 @@ public class ProgressionStore: MonoBehaviour
             return;
         }
         Instance = this;
-
-        // Follow-up Instantiation Logic
-        currentTimeRemaining = defaultTimeRemaining;
 
         for (int i = 0; i < arcanaChallengeDataObjects.Count; i++)
         {
