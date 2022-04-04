@@ -93,9 +93,6 @@ public abstract class ArcanaChallengeManager : MonoBehaviour
         }
     }
 
-    protected void SearchForEnemies() {
-        
-    }
 
     public abstract bool CheckForFailure(float currTime);
         // Terrain changes, etc for the current upcoming challenge set here

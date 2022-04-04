@@ -7,7 +7,7 @@ public class SpawnerManager : MonoBehaviour
     public enum Arcana 
     {
         Strength, 
-        Temperance, 
+        Temperance,
         Tower
     }
 
