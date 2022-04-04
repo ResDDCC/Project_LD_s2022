@@ -46,6 +46,7 @@ public class StateMachine : MonoBehaviour
         state = State.Idle;
         destinationSetter = GetComponent<AIDestinationSetter>();
         projectileLauncher = GetComponent<ProjectileLauncher>();
+        pathfinder = GameObject.FindWithTag("Pathfinding").GetComponent<AIPath>();
 
         startAction.performed += onStartAct;
         startAction.Enable();
