@@ -22,13 +22,6 @@ public class StateMachine : MonoBehaviour
         Beam
     }
 
-    public enum Arcana 
-    {
-        Strength, 
-        Temperance, 
-        Tower
-    }
-
     [Header("References")]
     
     // need to replace the GameObject declaration specifically with player script if we want to do fancier stuff
@@ -40,10 +33,7 @@ public class StateMachine : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private State state;
     [SerializeField] private EnemyType enemyType;
-    [SerializeField] public Arcana arcanaType;
     [SerializeField] private InputAction startAction;
-
-    [SerializeField] public int waveID;
 
     // Start is called before the first frame update
     void Start()
