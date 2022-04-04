@@ -5,7 +5,25 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    class PlayerInfoDisplay
+    {
+        public PlayerInfoDisplay(PlayerData playerData)
+        {
+            this.playerData = playerData;
+        }
+        public PlayerData playerData;
+        public List<Image> healthIcons = new List<Image>();
+        public List<Image> playerBuffs = new List<Image>();
+    }
+
+    private List<PlayerData> playerData = new List<PlayerData>();
+    private Dictionary<PlayerData, PlayerInfoDisplay> healthDisplaysLookup = new Dictionary<PlayerData, PlayerInfoDisplay>();
+
     [Header("UI Objects")]
+    public Image heart;
+    public Image damagedHealth;
+    public ArcanaChallengeData currentArcana;
+
     public Image[] hearts;
     public Image[] arcanas;
     public Image[] bossHealthUI;
@@ -32,7 +50,11 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //HUD Health decreases from PlayerMovement script
+        // First make sure using latest data
+        UpdatePlayerData();
+
+        UpdatePlayerDisplays();
+
         //Health
         UpdateHealth();
         //Update Time
@@ -51,6 +73,24 @@ public class HUD : MonoBehaviour
         //Display Arcana Buffs
         DisplayBuffs();
     }
+    void UpdatePlayerData()
+    {
+        playerData = ProgressionStore.Instance.GetActivePlayerData();
+    }
+
+    void UpdatePlayerDisplays()
+    {
+        foreach (PlayerData pD in playerData)
+        {
+            PlayerInfoDisplay playerDisplay = new PlayerInfoDisplay(pD);
+            healthDisplaysLookup.TryGetValue(pD, out playerDisplay);
+
+            healthDisplaysLookup[pD] = playerDisplay;
+
+            
+        }
+    }
+
     //UI
     void DisplayBuffs()
     {
@@ -98,6 +138,7 @@ public class HUD : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", mins, secs);
     }
 
+    
 
     void UpdateHealth()
     {
