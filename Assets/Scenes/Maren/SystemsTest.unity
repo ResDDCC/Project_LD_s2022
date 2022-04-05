@@ -337,6 +337,7 @@ MonoBehaviour:
   pathfinder: {fileID: 302011127}
   destinationSetter: {fileID: 0}
   projectileLauncher: {fileID: 0}
+  meleeLauncher: {fileID: 0}
   state: 0
   enemyType: 0
   startAction:
@@ -1369,6 +1370,7 @@ MonoBehaviour:
   pathfinder: {fileID: 302011127}
   destinationSetter: {fileID: 0}
   projectileLauncher: {fileID: 0}
+  meleeLauncher: {fileID: 0}
   state: 0
   enemyType: 0
   startAction:
@@ -1685,6 +1687,7 @@ MonoBehaviour:
   pathfinder: {fileID: 302011127}
   destinationSetter: {fileID: 0}
   projectileLauncher: {fileID: 0}
+  meleeLauncher: {fileID: 0}
   state: 0
   enemyType: 0
   startAction:
@@ -2156,6 +2159,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb59984f70e6bba4eba7ac37089ea8a7, type: 2}
   playersData: []
   activePlayers: []
+  baseFoolPlayerData: {fileID: 11400000, guid: 00a64ad288cdc0b4181f0ac0b70ed024, type: 2}
   currentArcana: {fileID: 0}
   currentTimeRemaining: 0
 --- !u!4 &2012159449
