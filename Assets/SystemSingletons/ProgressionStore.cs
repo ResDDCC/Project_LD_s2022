@@ -25,6 +25,8 @@ public class ProgressionStore: MonoBehaviour
     public List<PlayerData> playersData = new List<PlayerData>();
     public List<GameObject> activePlayers = new List<GameObject>();
     public Dictionary<PlayerData, GameObject> activePlayerLookup = new Dictionary<PlayerData, GameObject>();
+    [SerializeField]
+    private PlayerData baseFoolPlayerData;
 
     [SerializeField]
     private ArcanaChallengeData currentArcana;
@@ -54,7 +56,7 @@ public class ProgressionStore: MonoBehaviour
         PlayerData newPlayerData;
         if (activePlayers.Count + 1 > playersData.Count)
         {
-            newPlayerData = ScriptableObject.CreateInstance<PlayerData>();
+            newPlayerData = ScriptableObject.Instantiate<PlayerData>(baseFoolPlayerData);
             playersData.Add(newPlayerData);
             
         }
