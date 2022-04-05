@@ -189,9 +189,11 @@ public class PlayerController : MonoBehaviour
         gameObject.SetActive(false);
     }
     
+    /*
     void OnDrawGizmosSelected()
     {
         if (attackDirectionGO == null) { return; }
         Gizmos.DrawWireSphere(attackDirectionGO.transform.position, playerData.AttackRange);
     }
+    */
 }
