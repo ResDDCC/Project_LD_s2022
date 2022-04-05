@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Header("Player Data")]
+    [SerializeField]
     private PlayerData playerData;
     private List<PlayerBuff> activePlayerBuffs = new List<PlayerBuff>();
 
