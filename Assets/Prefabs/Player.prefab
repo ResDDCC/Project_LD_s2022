@@ -131,11 +131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0445ee280637f4a8aef69d384af84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 00a64ad288cdc0b4181f0ac0b70ed024, type: 2}
   movementSpeed: 8
-  canMove: 0
+  playerState: 0
   centerPointGO: {fileID: 8067482838472193546}
   attackDirectionGO: {fileID: 530065743846889902}
-  playerState: 0
   rb: {fileID: 4403542599631725031}
   playerInput: {fileID: 3873076086175929580}
 --- !u!212 &4403542599631725030
