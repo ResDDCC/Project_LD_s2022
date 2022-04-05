@@ -17,16 +17,10 @@ public class StateMachine : MonoBehaviour
 
     public enum EnemyType
     {
+        SpawnFail,
         Melee,
         Projectile,
         Beam
-    }
-
-    public enum Arcana 
-    {
-        Strength, 
-        Temperance, 
-        Tower
     }
 
     [Header("References")]
@@ -35,21 +29,24 @@ public class StateMachine : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private AIPath pathfinder;
     [SerializeField] private AIDestinationSetter destinationSetter;
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private ProjectileLauncher projectileLauncher;
+
 
     [Header("Settings")]
     [SerializeField] private State state;
     [SerializeField] private EnemyType enemyType;
-    [SerializeField] public Arcana arcanaType;
+    //[SerializeField] public Arcana arcanaType;
     [SerializeField] private InputAction startAction;
 
-    [SerializeField] public int waveID;
+    //[SerializeField] public int waveID;
 
     // Start is called before the first frame update
     void Start()
     {
         state = State.Idle;
         destinationSetter = GetComponent<AIDestinationSetter>();
+        projectileLauncher = GetComponent<ProjectileLauncher>();
+        pathfinder = GameObject.FindWithTag("Pathfinding").GetComponent<AIPath>();
 
         startAction.performed += onStartAct;
         startAction.Enable();
@@ -104,20 +101,26 @@ public class StateMachine : MonoBehaviour
                 break;
             
             case State.Attack:
-                pathfinder.canMove = false;
+                //pathfinder.canMove = false;
 
                 switch (enemyType)
                 {
                     case EnemyType.Melee:
+                        pathfinder.canMove = false;
                         // insert code to deal damage to player
                         // this guy needs a cooldown before he goes back to murdering you
                         break;
 
                     case EnemyType.Projectile:
-                       
                         // launch projectile
                         // the projectile itself will check if it hits/deals damage to player
-                        Instantiate(projectile, transform);
+
+                        projectileLauncher.Fire(true);
+                        if (pathfinder.remainingDistance > 5)
+                        {
+                            projectileLauncher.Fire(false);
+                            state = State.Moving;
+                        }
                         
                         break;
 

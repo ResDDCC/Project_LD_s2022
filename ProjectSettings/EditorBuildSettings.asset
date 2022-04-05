@@ -6,7 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Nick/MainMenu.unity
+    guid: bd544ece95def104b80699c24cf96ed3
+  - enabled: 1
+    path: Assets/Scenes/Nick/PauseMenu.unity
+    guid: 2c140513c11ba88468f689261a320806
+  - enabled: 1
+    path: Assets/Scenes/Nick/GameOverMenu.unity
+    guid: a06a1e990a32f544d80dd5dc120ce996
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 070d793c83159624eb447be446ebe4eb, type: 2}

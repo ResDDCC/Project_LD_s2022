@@ -1,0 +1,446 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &230751528859599165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8046802129834054841}
+  - component: {fileID: 2587706919613598482}
+  m_Layer: 0
+  m_Name: Spawner (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8046802129834054841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230751528859599165}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: -2.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431002727191827235}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2587706919613598482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230751528859599165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b50a66fc6561d94084a279c213ecb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  cooldownDuration: 0
+  cooldownManager: {fileID: 1895507565272216845, guid: e9f20d4433cca06428a21948f2fd49fa, type: 3}
+  MeleePrefab: {fileID: 5242696947333347099, guid: c4392f6c038509c4ebe45188b60ccff7, type: 3}
+  ProjectilePrefab: {fileID: 128203362071851527, guid: 706e2c1adcca4814791066d5a24ccbf2, type: 3}
+  BeamPrefab: {fileID: 4060261885083570275, guid: cca934e6cbbc4a34d86bb87283aee0a0, type: 3}
+--- !u!1 &1025099007608753830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7484678193081629}
+  - component: {fileID: 3538914601243098543}
+  m_Layer: 0
+  m_Name: Spawner (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7484678193081629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025099007608753830}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.87, y: -2.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431002727191827235}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3538914601243098543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025099007608753830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b50a66fc6561d94084a279c213ecb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  cooldownDuration: 0
+  cooldownManager: {fileID: 1895507565272216845, guid: e9f20d4433cca06428a21948f2fd49fa, type: 3}
+  MeleePrefab: {fileID: 5242696947333347099, guid: c4392f6c038509c4ebe45188b60ccff7, type: 3}
+  ProjectilePrefab: {fileID: 128203362071851527, guid: 706e2c1adcca4814791066d5a24ccbf2, type: 3}
+  BeamPrefab: {fileID: 4060261885083570275, guid: cca934e6cbbc4a34d86bb87283aee0a0, type: 3}
+--- !u!1 &2235447462424632617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 797633780305410416}
+  - component: {fileID: 5151433041087802333}
+  m_Layer: 0
+  m_Name: Spawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &797633780305410416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235447462424632617}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.84, y: 0.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431002727191827235}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5151433041087802333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235447462424632617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b50a66fc6561d94084a279c213ecb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  cooldownDuration: 0
+  cooldownManager: {fileID: 1895507565272216845, guid: e9f20d4433cca06428a21948f2fd49fa, type: 3}
+  MeleePrefab: {fileID: 5242696947333347099, guid: c4392f6c038509c4ebe45188b60ccff7, type: 3}
+  ProjectilePrefab: {fileID: 128203362071851527, guid: 706e2c1adcca4814791066d5a24ccbf2, type: 3}
+  BeamPrefab: {fileID: 4060261885083570275, guid: cca934e6cbbc4a34d86bb87283aee0a0, type: 3}
+--- !u!1 &4920822327206716147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5983403554130255718}
+  - component: {fileID: 2975966386111520329}
+  m_Layer: 0
+  m_Name: Spawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5983403554130255718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920822327206716147}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.89, y: -4.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431002727191827235}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2975966386111520329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920822327206716147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b50a66fc6561d94084a279c213ecb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  cooldownDuration: 0
+  cooldownManager: {fileID: 1895507565272216845, guid: e9f20d4433cca06428a21948f2fd49fa, type: 3}
+  MeleePrefab: {fileID: 5242696947333347099, guid: c4392f6c038509c4ebe45188b60ccff7, type: 3}
+  ProjectilePrefab: {fileID: 128203362071851527, guid: 706e2c1adcca4814791066d5a24ccbf2, type: 3}
+  BeamPrefab: {fileID: 4060261885083570275, guid: cca934e6cbbc4a34d86bb87283aee0a0, type: 3}
+--- !u!1 &6344744003453002846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162593790311476638}
+  - component: {fileID: 3553964481700060285}
+  m_Layer: 0
+  m_Name: Spawner (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1162593790311476638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344744003453002846}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.55, y: -4.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431002727191827235}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3553964481700060285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344744003453002846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b50a66fc6561d94084a279c213ecb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  cooldownDuration: 0
+  cooldownManager: {fileID: 1895507565272216845, guid: e9f20d4433cca06428a21948f2fd49fa, type: 3}
+  MeleePrefab: {fileID: 5242696947333347099, guid: c4392f6c038509c4ebe45188b60ccff7, type: 3}
+  ProjectilePrefab: {fileID: 128203362071851527, guid: 706e2c1adcca4814791066d5a24ccbf2, type: 3}
+  BeamPrefab: {fileID: 4060261885083570275, guid: cca934e6cbbc4a34d86bb87283aee0a0, type: 3}
+--- !u!1 &6803760465955816167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 435492900120816533}
+  - component: {fileID: 4398916369078655453}
+  m_Layer: 0
+  m_Name: Spawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &435492900120816533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803760465955816167}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.68, y: 0.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431002727191827235}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4398916369078655453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6803760465955816167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b50a66fc6561d94084a279c213ecb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  cooldownDuration: 0
+  cooldownManager: {fileID: 1895507565272216845, guid: e9f20d4433cca06428a21948f2fd49fa, type: 3}
+  MeleePrefab: {fileID: 5242696947333347099, guid: c4392f6c038509c4ebe45188b60ccff7, type: 3}
+  ProjectilePrefab: {fileID: 128203362071851527, guid: 706e2c1adcca4814791066d5a24ccbf2, type: 3}
+  BeamPrefab: {fileID: 4060261885083570275, guid: cca934e6cbbc4a34d86bb87283aee0a0, type: 3}
+--- !u!1 &7431002726262319102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7431002726262319101}
+  - component: {fileID: 7431002726262319100}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7431002726262319101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431002726262319102}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.8, y: -4.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431002727191827235}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7431002726262319100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431002726262319102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b50a66fc6561d94084a279c213ecb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  cooldownDuration: 0
+  cooldownManager: {fileID: 1895507565272216845, guid: e9f20d4433cca06428a21948f2fd49fa, type: 3}
+  MeleePrefab: {fileID: 5242696947333347099, guid: c4392f6c038509c4ebe45188b60ccff7, type: 3}
+  ProjectilePrefab: {fileID: 128203362071851527, guid: 706e2c1adcca4814791066d5a24ccbf2, type: 3}
+  BeamPrefab: {fileID: 4060261885083570275, guid: cca934e6cbbc4a34d86bb87283aee0a0, type: 3}
+--- !u!1 &7431002726297630710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7431002726297630708}
+  - component: {fileID: 7431002726297630709}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7431002726297630708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431002726297630710}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.62, y: 0.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7431002727191827235}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7431002726297630709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431002726297630710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b50a66fc6561d94084a279c213ecb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  cooldownDuration: 0
+  cooldownManager: {fileID: 1895507565272216845, guid: e9f20d4433cca06428a21948f2fd49fa, type: 3}
+  MeleePrefab: {fileID: 5242696947333347099, guid: c4392f6c038509c4ebe45188b60ccff7, type: 3}
+  ProjectilePrefab: {fileID: 128203362071851527, guid: 706e2c1adcca4814791066d5a24ccbf2, type: 3}
+  BeamPrefab: {fileID: 4060261885083570275, guid: cca934e6cbbc4a34d86bb87283aee0a0, type: 3}
+--- !u!1 &7431002727191827237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7431002727191827235}
+  - component: {fileID: 7431002727191827236}
+  m_Layer: 0
+  m_Name: SpawnerManager
+  m_TagString: SpawnerManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7431002727191827235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431002727191827237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 2.11, z: -0.72495687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7431002726297630708}
+  - {fileID: 7431002726262319101}
+  - {fileID: 797633780305410416}
+  - {fileID: 5983403554130255718}
+  - {fileID: 435492900120816533}
+  - {fileID: 1162593790311476638}
+  - {fileID: 8046802129834054841}
+  - {fileID: 7484678193081629}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7431002727191827236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7431002727191827237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d195f8b59045a9489195726e6c2b804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 0

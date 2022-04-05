@@ -23,6 +23,8 @@ public abstract class ArcanaChallengeManager : MonoBehaviour
     protected float currTime;
     protected Descriptors.ChallengeFailure reason;
 
+    protected SpawnerManager spawnerManager;
+
     // Buff and/or Debuff Player
     public void PreparePlayers(ArcanaChallengeData challengeData)
     {
@@ -91,9 +93,6 @@ public abstract class ArcanaChallengeManager : MonoBehaviour
         }
     }
 
-    protected void SearchForEnemies() {
-        
-    }
 
     public abstract bool CheckForFailure(float currTime);
         // Terrain changes, etc for the current upcoming challenge set here
