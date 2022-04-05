@@ -11,6 +11,8 @@ public class PlayerData : ScriptableObject
     private float baseMovementSpeed;
     public float movementSpeed;
 
+    public float attackRange;
+
     [SerializeField]
     private List<PlayerBuffData> buffData;
 
@@ -37,6 +39,15 @@ public class PlayerData : ScriptableObject
             return movementSpeed;
         }
     }
+
+    public float AttackRange
+    {
+        get
+        {
+            return attackRange;
+        }
+    }
+
     public List<PlayerBuffData> Buffs
     {
         get

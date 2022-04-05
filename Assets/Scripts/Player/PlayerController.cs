@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     private bool touchingEnemy = false;
     private int collisions = 0;
+    [SerializeField] private LayerMask enemyLayers;
 
     [Header("Input Settings")]
     [SerializeField]
@@ -97,6 +98,18 @@ public class PlayerController : MonoBehaviour
     void OnAttack(InputValue value)
     {
         //ChangeState(Descriptors.PlayerState.Attacking);
+
+        // play attack animation 
+        
+        // check for enemies within range
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackDirectionGO.transform.position, playerData.AttackRange, enemyLayers);
+
+        foreach (Collider2D enemy in hitEnemies) 
+        {
+            Debug.Log("player hit: " + enemy.name);
+        }
+
+        // deal damage
     }
     #endregion
 
@@ -140,7 +153,18 @@ public class PlayerController : MonoBehaviour
         {
             collisions++;
             touchingEnemy = true;
+            playerData.health -= 1;
         }
+        if(collision.gameObject.tag == "Projectile")
+        {
+            playerData.health -= 2;
+        }
+        if (collision.gameObject.tag == "Beam")
+        {
+            playerData.health -= 5;
+        }
+
+        if (playerData.Health <= 0) { Die(); }
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -158,4 +182,15 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+    void Die()
+    {
+        Debug.Log("Player died");
+        gameObject.SetActive(false);
+    }
+    
+    void OnDrawGizmosSelected()
+    {
+        if (attackDirectionGO == null) { return; }
+        Gizmos.DrawWireSphere(attackDirectionGO.transform.position, playerData.AttackRange);
+    }
 }

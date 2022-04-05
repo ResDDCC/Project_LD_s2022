@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IHasCooldown
 {
-    int Id { get; }
+    int CoolId { get; }
 
     float CooldownDuration { get; }
 }

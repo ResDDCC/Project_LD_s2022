@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour, IHasCooldown
     [SerializeField] private GameObject ProjectilePrefab;
     [SerializeField] private GameObject BeamPrefab;
 
-    public int Id => id;
+    public int CoolId => id;
     public float CooldownDuration => cooldownDuration;
 
     private bool waveComplete;
@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour, IHasCooldown
     // Start is called before the first frame update
     void Start()
     {
-        //id = 1;
+        id = 2;
         cooldownDuration = 2f;
         cooldownManager = GameObject.FindGameObjectWithTag("CooldownManager").GetComponent<CooldownManager>();
         waveComplete = false;
