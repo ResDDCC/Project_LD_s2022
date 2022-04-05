@@ -30,6 +30,7 @@ public class StateMachine : MonoBehaviour
     [SerializeField] private AIPath pathfinder;
     [SerializeField] private AIDestinationSetter destinationSetter;
     [SerializeField] private ProjectileLauncher projectileLauncher;
+    [SerializeField] private MeleeLauncher meleeLauncher;
 
 
     [Header("Settings")]
@@ -46,7 +47,9 @@ public class StateMachine : MonoBehaviour
         state = State.Idle;
         destinationSetter = GetComponent<AIDestinationSetter>();
         projectileLauncher = GetComponent<ProjectileLauncher>();
-        pathfinder = GameObject.FindWithTag("Pathfinding").GetComponent<AIPath>();
+        meleeLauncher = GetComponent<MeleeLauncher>();
+        pathfinder = gameObject.GetComponent<AIPath>();
+        Debug.Log(pathfinder);
 
         startAction.performed += onStartAct;
         startAction.Enable();
@@ -82,21 +85,6 @@ public class StateMachine : MonoBehaviour
                 if (pathfinder.reachedDestination) {
                     state = State.Attack;
                 }
-                
-                // switch (enemyType)
-                // {
-                //     case EnemyType.Melee:
-                //         // if within distance, switch to relevant attack state
-                //         break;
-
-                //     case EnemyType.Projectile:
-                //         // if within distance, switch to relevant attack state
-                //         break;
-
-                //     case EnemyType.Beam:
-                //         // if within distance, switch to relevant attack state
-                //         break;
-                // }
 
                 break;
             
@@ -106,9 +94,16 @@ public class StateMachine : MonoBehaviour
                 switch (enemyType)
                 {
                     case EnemyType.Melee:
+                        Debug.Log("Melee in attack state");
                         pathfinder.canMove = false;
                         // insert code to deal damage to player
-                        // this guy needs a cooldown before he goes back to murdering you
+                        //if (!meleeLauncher.WaitForCooldown()) { meleeLauncher.Attack(true); }
+                        
+                        //Debug.Log(meleeLauncher.WaitForCooldown().ToString());
+                        
+                        if (!meleeLauncher.attacking) { meleeLauncher.Attack(true); }
+                        else { state = State.Moving; }
+
                         break;
 
                     case EnemyType.Projectile:

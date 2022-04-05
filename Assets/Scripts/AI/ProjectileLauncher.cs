@@ -13,13 +13,14 @@ public class ProjectileLauncher : MonoBehaviour, IHasCooldown
     [SerializeField] private int id;
     [SerializeField] private float cooldownTime;
 
-    public int Id => id;
+    public int CoolId => id;
     public float CooldownDuration => cooldownTime;
     private bool firing;
     
     // Start is called before the first frame update
     void Start()
     {
+        id = 0;
         cooldownManager = GameObject.FindGameObjectWithTag("CooldownManager").GetComponent<CooldownManager>();
         firing = false;
     }

@@ -54,7 +54,7 @@ public class CooldownData
 {
     public CooldownData(IHasCooldown cooldown)
     {
-        Id = cooldown.Id;
+        Id = cooldown.CoolId;
         RemainingTime = cooldown.CooldownDuration;
     }
 

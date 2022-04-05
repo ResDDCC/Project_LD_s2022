@@ -8,6 +8,7 @@ TagManager:
   - CooldownManager
   - SpawnerManager
   - Pathfinding
+  - ChargeManager
   layers:
   - Default
   - TransparentFX
